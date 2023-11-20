@@ -1,3 +1,9 @@
+import formsGenerate.ArchiveForm
+import formsGenerate.ListForm
+
 fun main(args: Array<String>) {
-    println("Hello World!")
+
+    val archiveForm = ArchiveForm(title = "Список архивов")
+    archiveForm.display()
+
 }
