@@ -1,6 +1,6 @@
 package formsGenerate
 
-class NotesForm(title: String, ownerForm: ArchiveForm):ListForm(title, ownerForm) {
+class NotesForm(title: String, ownerForm: ArchiveForm) : ListForm(title, ownerForm) {
 
     override fun getPrewiev(): String = "ЗАМЕТКИ АРХИВА \"${title.uppercase()}\""
 

@@ -2,12 +2,13 @@ package formsGenerate
 
 import Command
 
-abstract class Form(val title:String,  val ownerForm: Form? = null) {
+abstract class Form(val title: String, val ownerForm: Form? = null) {
 
     val commands: MutableMap<Int, Command> = mutableMapOf()
 
     abstract fun generateCommandList()
-    abstract fun getPrewiev():String
+
+    abstract fun getPrewiev(): String
 
     fun display() {
         generateCommandList()
@@ -17,11 +18,8 @@ abstract class Form(val title:String,  val ownerForm: Form? = null) {
     fun openForm(element: Form) {
         element.display()
     }
+
     fun back() {
-
-        if (ownerForm != null) {
-            ownerForm.display()
-        }
-
+        ownerForm?.display()
     }
 }

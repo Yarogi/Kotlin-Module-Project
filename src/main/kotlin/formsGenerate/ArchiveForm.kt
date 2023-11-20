@@ -2,7 +2,7 @@ package formsGenerate
 
 import EnteringCommand
 
-class ArchiveForm(title: String):ListForm(title) {
+class ArchiveForm(title: String) : ListForm(title) {
 
     override fun getPrewiev(): String = title.uppercase()
     override fun addContentAction(): ListForm? {
@@ -10,7 +10,7 @@ class ArchiveForm(title: String):ListForm(title) {
         val name = EnteringCommand.inString(
                 description = "Введите наименование нового каталога")
 
-        if (name != null){
+        if (name != null) {
             return NotesForm(name, this)
         }
 
